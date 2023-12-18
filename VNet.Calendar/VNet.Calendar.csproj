@@ -1,13 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(ServerBuild)' != ''">
+	</PropertyGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /e /y &quot;$(TargetPath)&quot; &quot;D:\My Code\VNet bin\&quot;" />
-  </Target>
+	<ItemGroup Condition="'$(ServerBuild)' != ''">
+	</ItemGroup>
 
+	<ItemGroup Condition="'$(ServerBuild)' == ''">
+	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(ServerBuild)' == ''">
+		<Exec Command="xcopy /e /y &quot;$(TargetPath)&quot; &quot;D:\My Code\VNet bin\&quot;" />
+	</Target>
 </Project>
