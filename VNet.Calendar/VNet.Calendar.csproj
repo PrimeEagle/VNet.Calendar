@@ -5,6 +5,27 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
+	<PropertyGroup>
+		<PackageId>VNet.Calendar</PackageId>
+		<Authors>PrimeEagle</Authors>
+		<Product>VNet.Calendar</Product>
+		<Description>A class library for converting dates between different calendars, both modern and ancient, and for calculating special dates.</Description>
+		<PackageTags>dotnet;dotnet-core;dotnet-library;calendar;date;datetime</PackageTags>
+		<PackageReleaseNotes>Add NuGet metadata.</PackageReleaseNotes>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/PrimeEagle/VNet.Calendar</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/PrimeEagle/VNet.Calendar</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<TargetFramework>net8.0</TargetFramework>
+		<AssemblyName>VNet.Calendar</AssemblyName>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="icon.png" Pack="true" PackagePath="" />
+	</ItemGroup>
+	
 	<PropertyGroup Condition="'$(ServerBuild)' != ''">
 	</PropertyGroup>
 
